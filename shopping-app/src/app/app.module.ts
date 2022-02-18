@@ -1,6 +1,7 @@
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
+import { DropdownDirective } from './shared/dropdown.directive';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { NgModule } from '@angular/core';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
@@ -20,6 +21,7 @@ import { ShoppingListEditComponent } from './shopping-list/shopping-list-edit/sh
     RecipeDetailComponent,
     RecipeItemComponent,
     ShoppingListEditComponent,
+    DropdownDirective,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
