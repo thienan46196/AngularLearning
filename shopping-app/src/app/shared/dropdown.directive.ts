@@ -10,7 +10,7 @@ export class DropdownDirective {
     this.isOpen = !this.isOpen;
   }
 
-  @HostListener('mouseleave') closeMenu() {
-    this.isOpen = false;
-  }
+  // @HostListener('mouseleave') closeMenu() {
+  //   this.isOpen = false;
+  // }
 }
