@@ -1,0 +1,10 @@
+button,
+a,
+li :hover {
+  cursor: pointer;
+  color: transparent;
+}
+
+.active {
+  color: red;
+}

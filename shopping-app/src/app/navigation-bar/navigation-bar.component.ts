@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -6,12 +7,12 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./navigation-bar.component.css'],
 })
 export class NavigationBarComponent implements OnInit {
-  @Output() featureSelected = new EventEmitter<string>();
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
-  onSelect(feature: string) {
-    this.featureSelected.emit(feature);
+  onGoHome() {
+    console.log('a');
+    this.router.navigate(['']);
   }
 }

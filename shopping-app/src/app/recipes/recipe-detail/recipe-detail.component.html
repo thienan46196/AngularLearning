@@ -4,6 +4,7 @@
       src="{{ recipe.imagePath }}"
       alt="{{ recipe.name }}"
       class="img-responsive"
+      [ngStyle]="{ width: 'auto', height: '400px' }"
     />
   </div>
 </div>
@@ -22,11 +23,11 @@
       </button>
       <ul class="dropdown-menu">
         <li>
-          <a href="#" (click)="onAddIngredientsToShoppingList()"
+          <a (click)="onAddIngredientsToShoppingList()"
             >Add Ingredients to Shopping List</a
           >
         </li>
-        <li><a href="#">Edit Recipe</a></li>
+        <li><a [routerLink]="['../', id, 'edit']">Edit Recipe</a></li>
         <li><a href="#">Delete Recipe</a></li>
       </ul>
     </div>
