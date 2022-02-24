@@ -27,8 +27,8 @@
             >Add Ingredients to Shopping List</a
           >
         </li>
-        <li><a [routerLink]="['../', id, 'edit']">Edit Recipe</a></li>
-        <li><a href="#">Delete Recipe</a></li>
+        <li><a (click)="onNavigate('edit')">Edit Recipe</a></li>
+        <li><a (click)="onDeleteRecipe()">Delete Recipe</a></li>
       </ul>
     </div>
   </div>

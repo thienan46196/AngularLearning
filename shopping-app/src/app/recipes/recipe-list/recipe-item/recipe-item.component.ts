@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
-import { Recipe } from './../../recipes.model';
+import { Recipe } from '../../../shared/recipes.model';
 import { RecipesService } from './../../recipes.service';
 
 @Component({
@@ -13,11 +12,11 @@ export class RecipeItemComponent implements OnInit {
   @Input() recipe: Recipe;
   @Input() index: number;
 
-  constructor(private router: Router) {}
+  constructor(private recipesService: RecipesService) {}
 
   ngOnInit(): void {}
 
   onSelect() {
-    this.router.navigate(['recipes', this.index]);
+    this.recipesService.selectedRecipe.next(this.index);
   }
 }

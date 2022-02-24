@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,7 +13,6 @@ export class NavigationBarComponent implements OnInit {
   ngOnInit(): void {}
 
   onGoHome() {
-    console.log('a');
     this.router.navigate(['']);
   }
 }
